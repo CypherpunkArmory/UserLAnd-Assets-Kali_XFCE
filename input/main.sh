@@ -15,8 +15,9 @@ apt-get update
 
 #install some packages with need for UserLAnd
 export DEBIAN_FRONTEND=noninteractive
-apt-get install -y --no-install-recommends sudo dropbear libgl1-mesa-glx tightvncserver xterm xfonts-base twm expect wget curl
+apt-get install -y --no-install-recommends sudo dropbear libgl1-mesa-glx tightvncserver xterm xfonts-base expect wget curl
 apt-get install -y pulseaudio
+apt-get install -y xfce4 dbus-x11
 
 #clean up after ourselves
 apt-get clean

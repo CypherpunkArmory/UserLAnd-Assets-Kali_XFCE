@@ -32,6 +32,10 @@ fi
 
 vncrc_line="\$geometry = \"${DIMENSIONS}\";"
 echo $vncrc_line > /home/$INITIAL_USERNAME/.vncrc
+mkdir -p /home/$INITIAL_USERNAME/.vnc
+echo '#!/bin/sh' > /home/$INITIAL_USERNAME/.vnc/xstartup
+echo '/usr/bin/startxfce4' >> /home/$INITIAL_USERNAME/.vnc/xstartup
+chmod 777 /home/$INITIAL_USERNAME/.vnc/xstartup
 
 if [[ -z "${VNC_DISPLAY}" ]]; then
   VNC_DISPLAY="51"
